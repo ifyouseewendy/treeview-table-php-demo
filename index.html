@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      table, td, th {
+        border: 1px solid;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+    </style>
+</head>
+<body>
+    <table class="collaptable">
+    <tr>
+      <th>name</th>
+      <th>org_id</th>
+      <th>parent_id</th>
+      <th>col1</th>
+      <th>col2</th>
+      <th>col3</th>
+    </tr>
+          <tr data-id="1" data-parent="0">
+        <td>Org 1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="3" data-parent="1">
+        <td>Org 3</td>
+        <td>3</td>
+        <td>1</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="7" data-parent="3">
+        <td>Org 7</td>
+        <td>7</td>
+        <td>3</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="8" data-parent="3">
+        <td>Org 8</td>
+        <td>8</td>
+        <td>3</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="4" data-parent="1">
+        <td>Org 4</td>
+        <td>4</td>
+        <td>1</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="2" data-parent="0">
+        <td>Org 2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="5" data-parent="2">
+        <td>Org 5</td>
+        <td>5</td>
+        <td>2</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+          <tr data-id="6" data-parent="2">
+        <td>Org 6</td>
+        <td>6</td>
+        <td>2</td>
+        <td>col1</td>
+        <td>col2</td>
+        <td>col3</td>
+      </tr>
+      </table>
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="./jquery.aCollapTable.min.js"></script>
+  <script>
+    $('.collaptable').aCollapTable({ 
+      // the table is collapased at start
+      startCollapsed: true,
+
+      // the plus/minus button will be added like a column
+      addColumn: false, 
+
+      // The expand button ("plus" +)
+      plusButton: '<span class="i">+</span>', 
+
+      // The collapse button ("minus" -)
+      minusButton: '<span class="i">-</span>' 
+    });
+  </script>
+</body>
+</html>
